@@ -39,6 +39,7 @@ public class Reservation {
     }
 
     public long duration () {
+
         long diff = checkOut.getTime() - checkIn.getTime();
 
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
@@ -51,6 +52,7 @@ public class Reservation {
 
     @Override
     public String toString () {
+
         return "Room "
                 + roomNumber
                 + ", check-in: "
@@ -61,5 +63,6 @@ public class Reservation {
                 + duration()
                 + " nights";
     }
+
 
 }
